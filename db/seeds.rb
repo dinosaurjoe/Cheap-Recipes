@@ -5,3 +5,34 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Recipe.destroy_all
+Ingredient.destroy_all
+
+FOOD_PRICE = (0.5..2)
+TIME = (5..10)
+
+10.times do
+
+r = Recipe.new(
+  name: Faker::Food.dish,
+  cooking_time: rand(TIME),
+  prep_time: rand(TIME),
+  )
+
+  r.save
+end
+
+recipes = Recipe.all
+
+recipes.each do |recipe|
+
+  5.times do
+    i = Ingredient.new(
+      recipes_id: recipe.id,
+      name: Faker::Food.ingredient,
+      price: rand(FOOD_PRICE)
+      )
+
+    i.save
+  end
+end
