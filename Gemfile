@@ -36,6 +36,8 @@ gem 'font-awesome-rails'
 gem 'autoprefixer-rails'
 gem 'pundit'
 gem 'faker'
+gem 'jquery-rails'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
