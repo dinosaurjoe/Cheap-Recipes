@@ -1,0 +1,20 @@
+// Place all the styles related to the feed controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.feed-container {
+  height: 100vh;
+}
+
+.recipe-scroll {
+  position: absolute;
+  left: 0px;
+  height:100vh;
+  background-color: $red;
+}
+
+.recipe-show {
+  position: absolute;
+  right: 0px;
+  height: 100vh;
+  background-color: $dark-red;
+}
