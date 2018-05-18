@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Recipe.destroy_all
+Ingredient.destroy_all
 
 FOOD_PRICE = (0.5..2)
 TIME = (5..10)
