@@ -41,6 +41,8 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
+    autoprefixer-rails (7.2.5)
+      execjs
     bcrypt (3.1.11)
     bindex (0.5.0)
     builder (3.2.3)
@@ -72,6 +74,8 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.23)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.0.1)
@@ -99,6 +103,8 @@ GEM
     orm_adapter (0.5.0)
     public_suffix (3.0.2)
     puma (3.11.4)
+    pundit (1.1.0)
+      activesupport (>= 3.0.0)
     rack (2.0.5)
     rack-test (1.0.0)
       rack (>= 1.0, < 3)
@@ -188,13 +194,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   devise
+  font-awesome-rails
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.7)
+  pundit
   rails (~> 5.1.6)
   sass-rails (~> 5.0)
   selenium-webdriver
