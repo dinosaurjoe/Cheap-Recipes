@@ -17,6 +17,8 @@ r = Recipe.new(
   name: Faker::Food.dish,
   cooking_time: rand(TIME),
   prep_time: rand(TIME),
+  short_description: Faker::Lorem.sentence,
+  description: Faker::Lorem.paragraph(6)
   )
 
   r.save
