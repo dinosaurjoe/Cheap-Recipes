@@ -1,3 +1,20 @@
-<%= @recipe.name %>
-<%= @recipe.description %>
-<h1>YOOOOOOO</h1>
+<div class="jumbotron jumbotron-fluid" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url(<% if @recipe.photo %>
+                              <%= @recipe.photo %>
+                          <%  else %>
+                            https://images.unsplash.com/photo-1522204605090-c9a2ae146cb3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0147eeb73ae17cd12d9f3d9523ba01a6&auto=format&fit=crop&w=2091&q=80
+                          <% end %>
+                          ) no-repeat center center; background-size: 100% auto;">
+  <h1><%=@recipe.name%></h1>
+</div>
+<div class="container col-xs-12">
+  <div class="times col-xs-12">
+    <h4><strong>Prep Time: </strong><%=@recipe.prep_time%> minutes</h4>
+    <h4><strong>Cook Time: </strong><%=@recipe.cooking_time%> minutes</h4>
+  </div>
+  <div class="brief col-xs-12">
+    <h2><%= @recipe.short_description %></h2>
+  </div>
+  <div class="description col-xs-12">
+    <h4><%= @recipe.description%><h4>
+  </div>
+</div>
