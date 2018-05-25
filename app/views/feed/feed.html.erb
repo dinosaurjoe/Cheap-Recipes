@@ -1,6 +1,6 @@
 <div class="col-xs-12 feed-container">
 
-    <div class="col-xs-6 recipe-scroll">
+    <div class="col-xs-3 recipe-scroll">
       <% @recipes.each do |recipe| %>
         <%= link_to recipe_path(recipe), remote: true do%>
             <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<% if recipe.photo %>
@@ -22,7 +22,7 @@
 
     </div>
 
-    <div class="col-xs-6 recipe-show">
+    <div class="col-xs-9 recipe-show">
 
 
     </div>

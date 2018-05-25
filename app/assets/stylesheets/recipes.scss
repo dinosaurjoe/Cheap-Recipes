@@ -1,3 +1,16 @@
 // Place all the styles related to the recipe controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.jumbotron {
+  height: 30vh;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.jumbotron h1{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
