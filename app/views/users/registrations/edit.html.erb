@@ -12,16 +12,13 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="col-xs-12 col-md-3">
-  <%= f.label :profile_picture, "Add a Profile Picture", :class => 'name' %>
-  </div>
-  <div class="col-xs-12 col-md-7">
     <div class="field">
+        <%= f.label :profile_picture, "Add a Profile Picture", :class => 'name' %>
         <%= f.cl_image_upload(:profile_picture, return_delete_token: true) %>
         <p style="opacity:.4"><i>File Types: jpeg / png / gif<br>Max File-Size 20MB</i></p>
         </p>
     </div>
-    <div class="col-xs-12 col-sm-6">
+    <div class="col-xs-12">
         <div class="status"></div>
         <div class="preview"></div>
       </div>
