@@ -7,9 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Recipe.destroy_all
 Ingredient.destroy_all
+User.destroy_all
 
 FOOD_PRICE = (0.5..2)
 TIME = (5..10)
+
+joe = User.new(
+  email: "joe@joe.com",
+  password: "joejoe"
+  )
+
+joe.save
 
 10.times do
 
@@ -19,7 +27,7 @@ r = Recipe.new(
   prep_time: rand(TIME),
   short_description: Faker::Lorem.sentence,
   description: Faker::Lorem.paragraph(6),
-  user_id: User.first.id
+  user_id: joe.id
   )
 
   r.save
