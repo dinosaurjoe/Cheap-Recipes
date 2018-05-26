@@ -38,7 +38,7 @@ gem 'pundit'
 gem 'faker'
 gem 'jquery-rails'
 gem "google_custom_search_api"
-
+gem 'cloudinary'
 
 
 
