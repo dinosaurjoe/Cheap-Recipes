@@ -14,7 +14,7 @@
                   <h2><%= recipe.name%></h2>
                   <p>Total Cooking Time: <%= recipe.total_time%> Minutes</p>
               </div>
-              <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+              <%= cl_image_tag(User.find(recipe.user_id).profile_picture, :class => "card-user") %>
             </div>
         <% end %>
       <% end %>
