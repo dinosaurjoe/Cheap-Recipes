@@ -58,9 +58,13 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
+    carrierwave (1.2.2)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
-    cloudinary (1.9.1)
+    cloudinary (1.8.3)
       aws_cf_signer
       rest-client
     coffee-rails (4.2.2)
@@ -78,7 +82,7 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
-    domain_name (0.5.20170404)
+    domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.7.1)
     execjs (2.7.0)
@@ -232,7 +236,8 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.7)
   byebug
   capybara (~> 2.13)
-  cloudinary
+  carrierwave (~> 1.2.1)
+  cloudinary (~> 1.8.1)
   coffee-rails (~> 4.2)
   devise
   faker
