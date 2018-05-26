@@ -12,6 +12,22 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
+  <div class="col-xs-12 col-md-3">
+  <%= f.label :profile_picture, "Add a Profile Picture", :class => 'name' %>
+  </div>
+  <div class="col-xs-12 col-md-7">
+    <div class="field">
+        <%= f.cl_image_upload(:profile_picture, return_delete_token: true) %>
+        <p style="opacity:.4"><i>File Types: jpeg / png / gif<br>Max File-Size 20MB</i></p>
+        </p>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="status"></div>
+        <div class="preview"></div>
+      </div>
+          <%= cloudinary_js_config %>
+
+  </div>
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
