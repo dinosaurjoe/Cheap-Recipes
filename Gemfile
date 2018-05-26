@@ -38,6 +38,8 @@ gem 'pundit'
 gem 'faker'
 gem 'jquery-rails'
 gem "google_custom_search_api"
+gem 'carrierwave', '~> 1.2.1'
+gem 'cloudinary', '~> 1.8.1'
 
 
 
@@ -51,6 +53,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'dotenv-rails'
 end
 
 group :development do
