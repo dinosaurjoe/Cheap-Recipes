@@ -14,6 +14,12 @@
     <h4><strong>Prep Time: </strong><%=@recipe.prep_time%> minutes</h4>
     <h4><strong>Cook Time: </strong><%=@recipe.cooking_time%> minutes</h4>
   </div>
+  <div class="ingredients col-xs-12">
+    <h3>Ingredients:</h3>
+    <% @recipe.ingredients.each do |ingredient| %>
+      <h4><%=ingredient.measurement%> <%=ingredient.measurement_type%> of <%=ingredient.name%></h4>
+    <% end %>
+  </div>
   <div class="brief col-xs-12">
     <h2><%= @recipe.short_description %></h2>
   </div>

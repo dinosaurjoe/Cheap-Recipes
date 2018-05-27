@@ -15,7 +15,7 @@ class Recipe < ApplicationRecord
   end
 
   def set_photo
-    url = "https://pixabay.com/en/photos/?q=#{@recipe.name}&hp=&image_type=all&order=popular&cat=&min_width=&min_height="
+    url = URI.parse("https://pixabay.com/en/photos/?q=#{@recipe.name}&hp=&image_type=all&order=popular&cat=&min_width=&min_height=")
     page = Nokogiri::HTML(open(url)).xpath("//img/@src").first
 
     @recipe.photo = page
