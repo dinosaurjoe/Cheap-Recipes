@@ -17,7 +17,7 @@
   <div class="ingredients col-xs-12">
     <h3>Ingredients:</h3>
     <% @recipe.ingredients.each do |ingredient| %>
-      <h4><%=ingredient.name%></h4>
+      <h4><%=ingredient.measurement%> <%=ingredient.measurement_type%> of <%=ingredient.name%></h4>
     <% end %>
   </div>
   <div class="brief col-xs-12">
