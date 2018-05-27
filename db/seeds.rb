@@ -11,6 +11,8 @@ User.destroy_all
 
 FOOD_PRICE = (1..3)
 TIME = (5..10)
+MEASUREMENT = (1..4)
+MEASUREMENT_TYPE = ["Tablespoon", "Teaspoon", "Cup", "Filet", "Ounce", "Gram"]
 
 joe = User.new(
   email: "joe@joe.com",
@@ -41,7 +43,9 @@ recipes.each do |recipe|
     i = Ingredient.new(
       recipe_id: recipe.id,
       name: Faker::Food.ingredient,
-      price: rand(FOOD_PRICE)
+      price: rand(FOOD_PRICE),
+      measurement: rand(MEASUREMENT),
+      measurement_type: MEASUREMENT_TYPE.sample
       )
 
     i.save
