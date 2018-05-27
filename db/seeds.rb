@@ -9,7 +9,7 @@ Recipe.destroy_all
 Ingredient.destroy_all
 User.destroy_all
 
-FOOD_PRICE = (0.5..2)
+FOOD_PRICE = (1..3)
 TIME = (5..10)
 
 joe = User.new(
@@ -39,7 +39,7 @@ recipes.each do |recipe|
 
   5.times do
     i = Ingredient.new(
-      recipes_id: recipe.id,
+      recipe_id: recipe.id,
       name: Faker::Food.ingredient,
       price: rand(FOOD_PRICE)
       )
@@ -47,3 +47,5 @@ recipes.each do |recipe|
     i.save
   end
 end
+
+
