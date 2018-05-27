@@ -45,7 +45,7 @@ recipes.each do |recipe|
       name: Faker::Food.ingredient,
       price: rand(FOOD_PRICE),
       measurement: rand(MEASUREMENT),
-      measurement_type: MEASUREMENT_TYPE.sample
+      measurement_type: "#{MEASUREMENT_TYPE.sample}"
       )
 
     i.save
