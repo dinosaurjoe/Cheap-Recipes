@@ -1,0 +1,52 @@
+<%= form_for @recipe do |f| %>
+  <div class="recipe-form">
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <%= f.label :name, "Name"%>
+      </div>
+      <div class="col-sm-12 col-md-8">
+        <%= f.text_field :name %>
+        <p style="opacity:.4"><i>(Required)</i></p>
+      </div>
+    </div>
+  <br>
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <%= f.label :prep_time, "Prep Time" %>
+      </div>
+      <div class="field">
+        <%= f.number_field :prep_time %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-4">
+        <%= f.label :cooking_time, "Cooking Time" %>
+      </div>
+      <div class="field">
+        <%= f.number_field :cooking_time %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-2">
+        <%= f.label :short_description, "Short Description" %>
+      </div>
+      <div class="col-sm-12 col-md-10">
+        <%= f.text_area :short_description, rows: 5, cols: 30 %>
+      </div>
+    </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-12 col-md-2">
+      <%= f.label :description, "Description" %>
+    </div>
+    <div class="col-sm-12 col-md-10">
+      <%= f.text_area :description, rows: 5, cols: 30 %>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-xs-8 col-sm-6 col-md-4">
+      <%= f.submit "Save", :class => 'btn btn-default btn-block' %>
+    </div>
+  </div>
+<% end %>
