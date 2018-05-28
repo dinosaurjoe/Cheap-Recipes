@@ -2,6 +2,12 @@ class Recipe < ApplicationRecord
   require 'nokogiri'
   require 'open-uri'
   has_many :ingredients
+  has_many :uploads, dependent: :destroy
+
+  accepts_nested_attributes_for :uploads, allow_destroy: true
+
+  scope :with_upload, -> { joins(:uploads).group('projects.id') }
+
 
   after_create :set_total_time
   after_create :set_photo

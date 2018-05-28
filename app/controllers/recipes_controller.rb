@@ -5,6 +5,11 @@ class RecipesController < ApplicationController
     @creator = User.find(@recipe.user_id)
   end
 
+  def new
+    @recipe = Recipe.new
+  end
+
+
   private
 
   def find_recipe
