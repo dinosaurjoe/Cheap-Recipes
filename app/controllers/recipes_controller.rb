@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :find_recipe
+  before_action :find_recipe, except: [:new]
 
   def show
     @creator = User.find(@recipe.user_id)
