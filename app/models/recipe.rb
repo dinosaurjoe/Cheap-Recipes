@@ -21,12 +21,14 @@ class Recipe < ApplicationRecord
   end
 
   def set_photo
-    url = URI.parse("https://pixabay.com/en/photos/?q=#{@recipe.name}&hp=&image_type=all&order=popular&cat=&min_width=&min_height=")
-    page = Nokogiri::HTML(open(url)).xpath("//img/@src").first
+    if @recipe.photo.nil?
+      url = URI.parse("https://pixabay.com/en/photos/?q=#{@recipe.name}&hp=&image_type=all&order=popular&cat=&min_width=&min_height=")
+      page = Nokogiri::HTML(open(url)).xpath("//img/@src").first
 
-    @recipe.photo = page
+      @recipe.photo = page
 
-    @recipe.save!
+      @recipe.save!
+    end
   end
 
 
