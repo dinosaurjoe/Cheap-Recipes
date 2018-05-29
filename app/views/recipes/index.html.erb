@@ -1,0 +1,35 @@
+<% @page_title = "Your Recipes" %>
+
+<div class="container">
+  <h3>Your Recipes</h3>
+  </br>
+
+  <%= link_to new_recipe_path, class: "btn btn-default" do %>
+    Add Recipe
+  <% end %>
+  </br>
+  </br>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th style="text-align: center;">Recipe Name</th>
+        <th style="text-align: center;">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @recipes.each_with_index do |recipe, index| %>
+        <tr>
+          <th scope="row"><%= index + 1 %></th>
+          <td><%= recipe.name %></td>
+          <td style="text-align: center;">
+            <%= link_to "View", feed_path(recipe) %>
+            <%= link_to "Edit", edit_recipe_path(recipe) %>
+            <%= link_to "Delete", recipe_path(recipe), method: :delete, data: { confirm: 'Delete recipe and its uploads?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
