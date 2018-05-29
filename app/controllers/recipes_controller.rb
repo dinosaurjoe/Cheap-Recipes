@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :find_recipe, except: [:new, :create]
+  before_action :find_recipe, except: [:new, :create, :index]
 
   def index
     @recipes = current_user.recipes

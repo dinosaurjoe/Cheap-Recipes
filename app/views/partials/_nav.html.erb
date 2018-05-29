@@ -33,7 +33,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <%= link_to "Edit Profile", edit_user_registration_path(@user), class: "dropdown-item" %>
-                <a class="dropdown-item" href="#">My Recipes</a>
+                <%= link_to "My Recipes", recipes_path, class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
                 <%= link_to "Create a New Recipe", new_recipe_path, class: "dropdown-item" %>
             </div>
