@@ -20,6 +20,7 @@ class RecipesController < ApplicationController
 
   def show
     @creator = User.find(@recipe.user_id)
+    @uploads = @recipe.uploads
   end
 
   def new

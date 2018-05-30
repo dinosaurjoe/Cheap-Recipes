@@ -6,7 +6,7 @@ class Recipe < ApplicationRecord
 
   accepts_nested_attributes_for :uploads, allow_destroy: true
 
-  scope :with_upload, -> { joins(:uploads).group('projects.id') }
+  scope :with_upload, -> { joins(:uploads).group('recipes.id') }
 
 
   after_create :set_total_time
