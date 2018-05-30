@@ -1,6 +1,5 @@
 class Upload < ApplicationRecord
   mount_uploader :image, ImageUploader
-  belongs_to :user
   belongs_to :recipe
 
   before_destroy :delete_cloudinary_asset
