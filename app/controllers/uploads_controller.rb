@@ -34,7 +34,7 @@ class UploadsController < ApplicationController
   private
 
   def upload_params
-    params.require(:upload).permit(:id, :video, images: [])
+    params.require(:upload).permit(:id, :image)
   end
 
   def find_recipe

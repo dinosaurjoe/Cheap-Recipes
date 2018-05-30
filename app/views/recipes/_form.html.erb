@@ -44,6 +44,19 @@
     </div>
   </div>
   <br>
+  <div class="field">
+        <%= f.label :photo, "Add a Photo", :class => 'name' %>
+        <%= f.cl_image_upload(:photo, return_delete_token: true) %>
+        <p style="opacity:.4"><i>File Types: jpeg / png / gif<br>Max File-Size 20MB</i></p>
+        </p>
+    </div>
+    <div class="col-xs-12">
+        <div class="status"></div>
+        <div class="preview"></div>
+      </div>
+          <%= cloudinary_js_config %>
+
+  </div>
   <div class="row">
     <div class="col-xs-8 col-sm-6 col-md-4">
       <%= f.submit "Save", :class => 'btn btn-default btn-block' %>
