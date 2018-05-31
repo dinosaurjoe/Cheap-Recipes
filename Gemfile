@@ -31,7 +31,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.7'
-gem 'webpacker', '~> 3.3'
+
+#gems for react front end
+gem 'webpacker', '~> 3.5'
+gem 'react-rails'
 
 
 gem 'font-awesome-rails'
